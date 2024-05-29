@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 251);
+}
+
+header {
+    background-color: #41e4ec;
+    color: rgb(22, 46, 97);
+    text-align: center;
+    padding: 1em 0; /*1 vez o tamanho da fonte atual. 0 significa que não haverá preenchimento na esquerda e na direita*/
+    -webkit-box-shadow: 0px 14px 36px -16px rgba(122,118,122,1);
+    -moz-box-shadow: 0px 14px 36px -16px rgba(122,118,122,1);
+    box-shadow: 0px 14px 36px -16px rgba(122,118,122,1);
+}
+
+main {
+    flex: 1; /*elemento flexível - ajuste*/
+    padding: 1em;
+}
+
+.purple-line {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(5, 184, 255, 0.582);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.light-blue-line {
+    position: absolute;
+    top: calc(68% - 20px); /* Distância da linha azul claro em relação ao centro */
+    left: 0;
+    width: 100%;
+    height: 20px; /* Espessura das linhas */
+    background-color: #c9a4e6; /* Cor azul claro */
+    z-index: -1;
+}
+
+.light-purple-line {
+    position: absolute;
+    top: calc(50% + 20px); /* Distância da linha roxo claro em relação ao centro */
+    left: 0;
+    width: 100%;
+    height: 20px; /* Espessura das linhas */
+    background-color: #c9a4e6; /* Cor roxo claro */
+    z-index: -1;
+}
+
+.filter-section {
+    margin-bottom: 1em; /*o preenchimento será equivalente a 1 vez o tamanho da fonte atual*/
+    color: #000000;
+}
+
+h3{
+    color: #033f51;
+}
+.special-h3 {
+    background-color: #daf6ff; /* Cor de fundo das letras */
+    display: inline; /* Para que a cor de fundo seja aplicada apenas ao texto */
+    padding: 1px; /* Espaçamento interno */
+    border-radius: 25px;
+}
+
+.special-h4 {
+    background-color: #bc40ff2e; /* Cor de fundo das letras */
+    display: inline; /* Para que a cor de fundo seja aplicada apenas ao texto */
+    padding: 8px; /* Espaçamento interno */
+    border-radius: 30px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /*itens flexíveis dentro do contêiner flexível podem ser dispostos em várias linhas ou colunas*/
+    text-align: justify-all;
+}
+
+.image-item {
+    flex: 1;
+    margin: 1em;
+    text-align: center;
+    
+}
+
+.image-item img {
+    width: 600px; /* ajuste padrão para todas as imagens*/
+    height: 570px; /* ajuste padrão para todas as imagens*/
+    object-fit: cover; /* para garantir que a imagem cubra a área definida */
+    border: 3px solid #00bfff;
+    
+    border-radius: 24px;
+    -webkit-box-shadow: 0px 0px 43px 12px rgba(0,164,176,1);
+    -moz-box-shadow: 0px 0px 43px 12px rgba(0,164,176,1);
+    box-shadow: 0px 0px 43px 12px rgba(0,164,176,1);
+    }
+    
+footer {
+    background-color: #001f4b;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: auto;
+}
+
+/* Estilos para diferentes filtros de daltonismo */
+.filter-image.achromatomaly {
+    filter: grayscale(100%);
+}
+
+.filter-image.deuteranomaly {
+    filter: hue-rotate(180deg);
+}
+
+.filter-image.tritanomaly {
+    filter: sepia(100%) saturate(300%) hue-rotate(-50deg);
+}
+
+.filter-image.acromatomy {
+    filter: grayscale(55%);
+}
+ 
+.filter-image.deuteranopy {
+    filter: hue-rotate(100deg) saturate(100%);
+}
+ 
+.filter-image.protanopy {
+    filter: sepia(35%) saturate(100%);
+}
+
